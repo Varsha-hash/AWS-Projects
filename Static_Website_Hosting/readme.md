@@ -81,5 +81,8 @@ http://your-bucket-name.s3-website-region.amazonaws.com
 - Public access must be enabled (Block Public Access disabled + bucket policy added)  
 - Upload files directly inside the bucket (do not upload as a zip file)
 
+## Production architecture
+User → Route53 → CloudFront → S3 ✅
+
 
 
