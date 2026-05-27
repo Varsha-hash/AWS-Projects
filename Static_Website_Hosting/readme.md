@@ -64,7 +64,7 @@ Add the following bucket policy:
     }
   ]
 }
-``
+```
 ---
 
 ## 🌐 Access Your Website
