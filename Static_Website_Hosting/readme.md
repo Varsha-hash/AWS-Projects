@@ -69,7 +69,9 @@ Add the following bucket policy:
 
 ## 🌐 Access Your Website
 
-Use the S3 Website Endpoint URL: http://your-bucket-name.s3-website-region.amazonaws.com
+Use the S3 Website Endpoint URL:
+
+http://your-bucket-name.s3-website-region.amazonaws.com
 
 ---
 
