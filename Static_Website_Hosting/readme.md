@@ -64,7 +64,7 @@ Add the following bucket policy:
     }
   ]
 }
-
+``
 ---
 
 ## 🌐 Access Your Website
@@ -80,6 +80,6 @@ http://your-bucket-name.s3-website-region.amazonaws.com
 - Make sure `index.html` is present in the bucket  
 - Public access must be enabled (Block Public Access disabled + bucket policy added)  
 - Upload files directly inside the bucket (do not upload as a zip file)
-``
+
 
 
