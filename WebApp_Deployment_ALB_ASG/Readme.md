@@ -49,7 +49,7 @@ Security Group (EC2)
 SSH (22) → Your IP
 HTTP (80) → ALB Security Group
 HTTPS (443) → Optional
-
+```
 
 ### ✅ Step 2: Create Auto Scaling Group
 
