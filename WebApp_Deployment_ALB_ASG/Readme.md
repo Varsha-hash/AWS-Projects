@@ -1,6 +1,6 @@
-# 🌐 Scalable Web Application using ALB & Auto Scaling
+## 🌐 Scalable Web Application using ALB & Auto Scaling
 
-## 📌 Project Overview
+### 📌 Project Overview
 
 This project demonstrates how to deploy a **highly available and scalable web application** on AWS using:
 
@@ -12,16 +12,16 @@ The application automatically scales based on traffic and ensures high availabil
 
 ---
 
-## 🏗️ Architecture
+### 🏗️ Architecture
 
 User → ALB → Target Group → Auto Scaling Group → EC2 Instances
 ---
 
-## 🚀 Deployment Steps
+### 🚀 Deployment Steps
 
 ---
 
-## ✅ Step 1: Create Launch Template
+### ✅ Step 1: Create Launch Template
 
 1. Navigate to:
 AWS Console → EC2 → Launch Templates → Create Launch Template
@@ -51,31 +51,26 @@ HTTP (80) → ALB Security Group
 HTTPS (443) → Optional
 
 
-Step 2: Create Auto Scaling Group
+### ✅ Step 2: Create Auto Scaling Group
 
+---
 Navigate to:
 
 EC2 → Auto Scaling Groups → Create Auto Scaling Group
 
-
 Select:
-
 WebAppTemplate
 
 Configure:
-
 Desired Capacity: 2
 Minimum Instances: 1
 Maximum Instances: 4
 
 Network
-
 Choose VPC
 Select at least 2 subnets (Multi-AZ)
 
-
-⚖️ Load Balancer
-
+Load Balancer
 Choose: Application Load Balancer
 Create Target Group:
 
@@ -84,51 +79,42 @@ Protocol: HTTP
 Port: 80
 Health Check Path: /
 
-Step 3: Create Application Load Balancer
+---
+
+### Step 3: Create Application Load Balancer
 
 Navigate to:
 
 EC2 → Load Balancers → Create Load Balancer
 
-
 Configure:
-
-
 Name: WebAppALB
 Scheme: Internet-facing
 VPC: Same as ASG
 AZs: Minimum 2
 
-
 Listener
 HTTP : 80
 
-
-🎯 Target Group
-
+Target Group
 Select previously created target group
 
-
-🔒 Security Group (ALB)
+Security Group (ALB)
 HTTP (80) → 0.0.0.0/0
 HTTPS (443) → Optional
 
+---
 
-✅ Step 4: Test Application
-
+### Step 4: Test Application
+---
 Go to:
-
 EC2 → Load Balancers
 
-
 Copy ALB DNS
-
 Example:
 http://webappalb-xxxx.ap-south-1.elb.amazonaws.com
 
-
 Open in browser
+Output : Welcome to Scalable Web App
 
-
-✅ Output
-Welcome to Scalable Web App
+---
